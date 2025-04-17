@@ -1,0 +1,22 @@
+{
+  "name": "Auto Assign",
+  "description": "Automatically assigns reviewers to pull requests based on configuration",
+  "inputs": {
+    "configuration-path": {
+      "description": "Path to the auto-assign configuration file",
+      "required": true,
+      "default": ".github/auto-assign-config.yaml"
+    }
+  },
+  "runs": {
+    "using": "composite",
+    "steps": [
+      {
+        "uses": "kentaro-m/auto-assign-action@v1.2.5",
+        "with": {
+          "configuration-path": "${{ inputs.configuration-path }}"
+        }
+      }
+    ]
+  }
+} 
