@@ -14,14 +14,5 @@
       "default": ".github/auto-assign-config.yaml",
       "required": true
     }
-  },
-  "permissions": {
-    "pull-requests": "write"
-  },
-  "triggers": [
-    {
-      "type": "pull_request_target",
-      "events": ["opened", "ready_for_review"]
-    }
-  ]
+  }
 } 
